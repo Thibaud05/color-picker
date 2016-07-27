@@ -171,7 +171,7 @@
     {"name":"A100", "color":"#ccff90" },
     {"name":"A200", "color":"#b2ff59" },
     {"name":"A400", "color":"#76ff03" },
-    {"name":"A700", "color":"#64dd17" },
+    {"name":"A700", "color":"#64dd17" }
 ]},
 {"name":"Lime","color":"#cddc39","colors":[
     {"name":"50", "color":"#f9fbe7" },

@@ -31,14 +31,12 @@ $( document ).ready(function() {
 var data = [];
 
 $.getJSON( "colors.json").done(function( jsonData ) {
-    var data = jsonData
+    data = jsonData
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
 });
-
-
-
-
-
-
 
 
 function colorPicker(me){
@@ -58,6 +56,7 @@ function colorPicker(me){
                         .attr("width",radius).attr("height",radius)
                         .attr("style","position:absolute;margin-left:-"+(d-15)+"px;margin-top:-"+(d+15)+"px;");
                 nbColor = data.length;
+                console.log(nbColor)
                 for(var i=0;i<nbColor; i++) {
                         var angles_degre =  Math.round(360 / nbColor);
                         this.DrawArc(0,70,canvas,angle_initial,angles_degre,data[i].color,i,0.2);
